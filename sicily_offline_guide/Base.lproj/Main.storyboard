@@ -1,24 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="byB-kx-BkP">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--to do-->
+        <scene sceneID="WEo-BD-hYM">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="SK8-MB-Slq" customClass="toDoVC" customModule="Sicily_guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e1Y-1j-nBx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vfn-jC-faA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="to do" image="iconfinder_document-03_1622833.png" id="kfQ-N9-qnu"/>
+                    <connections>
+                        <segue destination="E4e-lK-goy" kind="presentation" identifier="showObject" modalPresentationStyle="fullScreen" id="PKa-iH-Hid"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tzg-tp-EFU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-586" y="885"/>
+        </scene>
+        <!--main-->
+        <scene sceneID="DCf-O6-fCs">
+            <objects>
+                <viewController id="iP3-bc-TAl" customClass="mainscreenVC" customModule="Sicily_guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iak-Cj-Smn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GAe-Ez-mDJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="720"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.91980725529999996" green="0.81156463869999995" blue="0.8589175013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainCell" id="sCr-N1-sY7" customClass="cell_main" customModule="Sicily_guide" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sCr-N1-sY7" id="2J1-1u-avY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GAe-Ez-mDJ" firstAttribute="bottom" secondItem="Rgc-HX-TQq" secondAttribute="bottom" id="7YO-Sk-5ap"/>
+                            <constraint firstItem="GAe-Ez-mDJ" firstAttribute="trailing" secondItem="Rgc-HX-TQq" secondAttribute="trailing" id="9h8-wT-ndT"/>
+                            <constraint firstItem="GAe-Ez-mDJ" firstAttribute="top" secondItem="Rgc-HX-TQq" secondAttribute="top" id="G6Q-9C-uCP"/>
+                            <constraint firstItem="GAe-Ez-mDJ" firstAttribute="leading" secondItem="Rgc-HX-TQq" secondAttribute="leading" id="PGl-yj-DTo"/>
+                            <constraint firstItem="GAe-Ez-mDJ" firstAttribute="bottom" secondItem="Rgc-HX-TQq" secondAttribute="bottom" id="PLG-ee-kFO"/>
+                            <constraint firstItem="GAe-Ez-mDJ" firstAttribute="top" secondItem="Rgc-HX-TQq" secondAttribute="top" id="YMV-q6-oi8"/>
+                            <constraint firstItem="GAe-Ez-mDJ" firstAttribute="trailing" secondItem="Rgc-HX-TQq" secondAttribute="trailing" id="hS3-He-drz"/>
+                            <constraint firstItem="GAe-Ez-mDJ" firstAttribute="leading" secondItem="Rgc-HX-TQq" secondAttribute="leading" id="nMM-sI-RIY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rgc-HX-TQq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="main" image="Копия iconfinder_go-home_118770.png" selectedImage="Копия iconfinder_go-home_118770.png" id="Fbp-49-zXA">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myTable" destination="GAe-Ez-mDJ" id="eAP-v1-8Mu"/>
+                        <segue destination="E4e-lK-goy" kind="presentation" identifier="segue_detail_obj" modalPresentationStyle="fullScreen" id="4NO-aM-iBy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZ6-6l-aJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1294.2028985507247" y="884.59821428571422"/>
+        </scene>
+        <!--Detail ObjVC-->
+        <scene sceneID="75O-5W-DUF">
+            <objects>
+                <viewController storyboardIdentifier="objview" id="E4e-lK-goy" customClass="detailObjVC" customModule="Sicily_guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4YN-E7-MaO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6pz-wc-pNe"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vof-pm-4xk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-825" y="1698"/>
+        </scene>
+        <!--TabbarVC-->
+        <scene sceneID="Xdy-Eo-Z05">
+            <objects>
+                <tabBarController id="byB-kx-BkP" customClass="tabbarVC" customModule="Sicily_guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="3S5-Q0-tHl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="0.25037457190000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iP3-bc-TAl" kind="relationship" relationship="viewControllers" id="tZ0-WI-tD1"/>
+                        <segue destination="SK8-MB-Slq" kind="relationship" relationship="viewControllers" id="Aj1-wW-nmz"/>
+                        <segue destination="MEr-oL-QVC" kind="relationship" relationship="viewControllers" id="QBq-Gp-PFW"/>
+                        <segue destination="q3T-jP-a9Q" kind="relationship" relationship="viewControllers" id="nY8-Rb-MU4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTg-7j-f4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="50"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="vqA-PK-UqS">
+            <objects>
+                <viewController id="q3T-jP-a9Q" customClass="settingsVC" customModule="Sicily_guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fpe-Lb-uFd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gaB-jJ-m6L"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="iconfinder_gear_1055051.png" id="vZ8-2o-eMB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h51-4t-9DI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="885"/>
+        </scene>
+        <!--map-->
+        <scene sceneID="oXf-BW-KcI">
+            <objects>
+                <viewController id="MEr-oL-QVC" customClass="mapVC" customModule="Sicily_guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NdF-BQ-LSg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="C5R-YX-Ug5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="map" image="iconfinder_map_285662.png" id="70F-oz-KCW"/>
+                    <connections>
+                        <segue destination="E4e-lK-goy" kind="presentation" identifier="showObject" modalPresentationStyle="fullScreen" id="bP5-Hc-vq7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBv-mR-viI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191" y="885"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconfinder_document-03_1622833.png" width="24" height="24"/>
+        <image name="iconfinder_gear_1055051.png" width="24" height="24"/>
+        <image name="iconfinder_map_285662.png" width="24" height="24"/>
+        <image name="Копия iconfinder_go-home_118770.png" width="24" height="24"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="PKa-iH-Hid"/>
+    </inferredMetricsTieBreakers>
 </document>
