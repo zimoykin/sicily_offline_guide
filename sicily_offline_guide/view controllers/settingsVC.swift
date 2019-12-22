@@ -31,6 +31,7 @@ class settingsVC: UIViewController {
         textview.text = "login FACEBOOK have status under consstruction"
         textview.sizeToFit()
         textview.textColor = .white
+        textview.textAlignment = .center
         textview.backgroundColor = .black
         textview.frame.origin.y = image.frame.midY
         
