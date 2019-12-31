@@ -13,6 +13,11 @@ class mapVC: UIViewController {
     var todo: [ToDo]?
     
     var currentSight: Sight?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.overrideUserInterfaceStyle = Device.getInterfaceMode()
+    }
+    
         
     fileprivate func setAnnotations() {
         for i in objs! {
@@ -49,9 +54,35 @@ class mapVC: UIViewController {
     
         map?.delegate = self
         setAnnotations()
+        
+        let sicily_btn = UIButton(frame: CGRect(x: self.view.center.x, y: 45, width: 20, height: 20))
+        //sicily_btn.setTitle("sicily", for: .normal)
+        sicily_btn.setImage(UIImage(named: "map.png"), for: .normal)
+        
+        sicily_btn.sizeToFit()
+        sicily_btn.alpha = 0
+        sicily_btn.center.x = self.view.center.x
+        sicily_btn.addTarget(self, action: #selector(sicilyInCenter), for: .touchUpInside)
+        
+        self.view.addSubview(sicily_btn)
 
+        UIView.animate(withDuration: 2) {
+
+           sicily_btn.alpha = 1
+            
+        }
+        
         NotificationCenter.default.addObserver(self, selector: #selector(todochanged), name: NSNotification.Name(rawValue: "ToDoChanged"), object: nil)
         
+        
+    }
+    
+    @objc func sicilyInCenter() {
+        
+        Device.vibrate()
+        
+        let cl_center = CLLocationCoordinate2D(latitude: 37.568561, longitude: 13.960773)
+        map?.setRegion(MKCoordinateRegion(center: cl_center, latitudinalMeters: 10000*30, longitudinalMeters: 10000*30), animated: true)
         
     }
     
@@ -62,7 +93,7 @@ class mapVC: UIViewController {
         for i in map!.annotations {
             map?.removeAnnotation(i)
         }
-        
+
         setAnnotations()
         
     }
@@ -126,21 +157,19 @@ extension mapVC: MKMapViewDelegate, CLLocationManagerDelegate {
         let sight_view = view.annotation as! Sight_map
         
         currentSight = sight_view.sight
-        
         performSegue(withIdentifier: "showObject", sender: self)
 
-        
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if ((segue.identifier == "showObject") && (currentSight != nil)) {
-                 let vc = segue.destination as! detailObjVC
+            let vc = segue.destination as! detailObjVC
             vc.uuid = currentSight?.uuid
-         } else {
-             fatalError()
-         }
+        } else {
+            fatalError()
+        }
     }
     
 }
@@ -155,7 +184,7 @@ class Sight_map: NSObject, MKAnnotation {
     var isToDo: Bool?
     
     init(name:String, crsight: Sight, lat:CLLocationDegrees, long:CLLocationDegrees, pinimage: UIImage, thisToDo: Bool){
-       
+        
         title   = name
         coordinate = CLLocationCoordinate2DMake(lat, long)
         image   = pinimage

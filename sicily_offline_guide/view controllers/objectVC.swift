@@ -8,11 +8,15 @@ class objectVC: UIViewController {
     
     var uuid: UUID?
     
-//    @IBOutlet weak var mapView: MKMapView!
+    override func viewWillAppear(_ animated: Bool) {
+        self.overrideUserInterfaceStyle = Device.getInterfaceMode()
+    }
+
     
 //    MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.overrideUserInterfaceStyle = Device.getInterfaceMode()
 
 
 //        BUTTON

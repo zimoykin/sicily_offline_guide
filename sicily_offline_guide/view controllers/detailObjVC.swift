@@ -26,6 +26,12 @@ class detailObjVC: UIViewController {
     
     let glUseCoreData = usCoreData()
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.overrideUserInterfaceStyle = Device.getInterfaceMode()
+    }
+    
+    
+    
     fileprivate func setCancelButton() {
         //        BUTTON
         let cancelBTN = UIButton(type: .close)
@@ -63,8 +69,6 @@ class detailObjVC: UIViewController {
     }
     
     @objc func pushcancel() {
-        
-//        Device.vibrate()
         self.dismiss(animated: true, completion: nil)
         
     }
@@ -113,8 +117,7 @@ class detailObjVC: UIViewController {
                 self.ctitle?.backgroundColor = .white
             }
             
-
-            
+    
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ToDoChanged"), object: nil, userInfo: nil)
   
         }
@@ -182,17 +185,18 @@ class detailObjVC: UIViewController {
 //    MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.overrideUserInterfaceStyle = Device.getInterfaceMode()
         
         setScrollView()
         setCancelButton()
+       
         
         isToDo = glUseCoreData.checkItInToDo(uuid: uuid!)
-        
         sight = glUseCoreData.getObjByUUID(uuid: uuid!)
         
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             
-            self.ctitle = UITextView(frame: CGRect(x: 0, y: 0, width: (7 * max((self.sight?.name!.count)!, 7)), height: 20))
+            self.ctitle = UITextView(frame: CGRect(x: 0, y: 0, width: (7 * max((self.sight?.name!.count)!, 20)), height: 20))
             
             let style = NSMutableParagraphStyle()
             style.alignment = .center
@@ -203,7 +207,7 @@ class detailObjVC: UIViewController {
         
             self.ctitle!.attributedText = text
             
-            self.ctitle!.alpha = 0.1
+            self.ctitle!.alpha = 0
             self.ctitle?.backgroundColor = .white
             self.ctitle?.textColor = .black
             self.ctitle?.isUserInteractionEnabled = false
@@ -239,52 +243,52 @@ class detailObjVC: UIViewController {
                 
                 
                 self.image_view?.contentMode = .scaleAspectFill
-                self.image_view!.center  = self.view.center
-                self.image_view?.frame.origin.y = 0
-                self.image_view!.alpha = 0.1
+                self.image_view!.center.x  = self.view.center.x
+               // self.image_view?.frame.origin.y = 0
+                self.image_view!.alpha = 0
                 
                 self.mainScroll!.addSubview(self.image_view!)
                 self.mainScroll?.bringSubviewToFront(self.ctitle!)
                 
-                UIView.animate(withDuration: 1) {
+                UIView.animate(withDuration: 3) {
                     self.image_view!.alpha = 1
                 }
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-                UIView.animate(withDuration: 1) {
-//                    self.image_view?.frame.origin.y -= (self.image_view?.frame.minY)! - (self.ctitle?.frame.maxY)!
-                  //  if nophoto {
-                        self.image_view?.frame.origin.y = 0
-                   // }
-                }
-            }
+//            DispatchQueue.main.asyncAfter(deadline: .now()+3) {
+//                UIView.animate(withDuration: 1) {
+////                    self.image_view?.frame.origin.y -= (self.image_view?.frame.minY)! - (self.ctitle?.frame.maxY)!
+//                  //  if nophoto {
+//                  //      self.image_view?.frame.origin.y = 0
+//                   // }
+//                }
+//            }
             
             DispatchQueue.main.asyncAfter(deadline: .now()+3) {
                 
-                self.full_description = UITextView(frame: CGRect(x: 0, y: 0, width: self.screen_width, height: 200))
+                self.full_description = UITextView(frame: CGRect(x: 0, y: (self.image_view?.frame.height)!, width: self.screen_width, height: 200))
                 
                 self.full_description?.text = self.sight?.fulldescription != "" ? self.sight?.fulldescription : " no information "
                 
-                self.full_description?.center = self.mainScroll!.center
-                self.full_description?.backgroundColor = .white
+                //self.full_description?.center.x = self.mainScroll!.center.x
+                self.full_description?.backgroundColor = UIColor(displayP3Red: 255/255, green: 250/255, blue: 184/255, alpha: 1)
                 self.full_description?.textColor = .black
+                self.full_description?.sizeToFit()
                 
-                self.mainScroll?.alpha = 0.1
+                self.mainScroll?.alpha = 0
                 self.mainScroll?.addSubview(self.full_description!)
                 
                 self.full_description?.isUserInteractionEnabled = false
                 
                 UIView.animate(withDuration: 1) {
                     self.mainScroll?.alpha = 1
-                    self.full_description?.frame.origin.y = (self.image_view?.frame.maxY)! //+ (self.ctitle?.frame.maxY)!
                     
                     self.full_description?.translatesAutoresizingMaskIntoConstraints = true
-                    self.full_description?.sizeToFit()
+                    self.full_description?.frame.origin.y = (self.image_view?.frame.height)! //+ (self.ctitle?.frame.maxY)!
                     self.full_description?.isScrollEnabled = false
                     
                     self.mainScroll?.isScrollEnabled = true
-                    self.mainScroll?.contentSize = CGSize(width: self.screen_width, height: 70 + (self.full_description?.frame.maxY)!)
+                    self.mainScroll?.contentSize = CGSize(width: self.screen_width, height: (self.image_view?.frame.height)! + 70 + (self.full_description?.frame.height)!)
                     
                 }
                 
