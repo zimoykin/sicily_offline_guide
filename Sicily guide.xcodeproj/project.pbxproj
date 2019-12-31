@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2DB9EF23B7CC0D0006D2F4 /* sicily_guide_intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DB9F123B7CC0D0006D2F4 /* sicily_guide_intro.mp4 */; };
+		0A2DB9F323B803550006D2F4 /* sound_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DB9F223B803550006D2F4 /* sound_on.png */; };
+		0A2DB9F523B8035B0006D2F4 /* sound_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DB9F423B8035B0006D2F4 /* sound_off.png */; };
+		0A2DB9F723B80DDC0006D2F4 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DB9F623B80DDC0006D2F4 /* map.png */; };
+		0A2DB9F923BBB9B90006D2F4 /* nubia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DB9F823BBB9B90006D2F4 /* nubia.jpg */; };
+		0A2DB9FB23BBBCB80006D2F4 /* Pretoria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DB9FA23BBBCB80006D2F4 /* Pretoria.jpg */; };
+		0A3CC2EC23B26167003724D6 /* dev.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3CC2EB23B26167003724D6 /* dev.png */; };
 		0A44638E23ACA70100131CD8 /* settingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A44638D23ACA70100131CD8 /* settingsVC.swift */; };
 		0A44639023AD6BD400131CD8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A44638F23AD6BD400131CD8 /* Device.swift */; };
 		0A48275B23A61C1C0057F01F /* toDoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48275A23A61C1C0057F01F /* toDoVC.swift */; };
@@ -33,15 +40,24 @@
 		0A4ED658239D85F5009D2D07 /* workCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4ED657239D85F5009D2D07 /* workCoreData.swift */; };
 		0A4ED65B239DA31A009D2D07 /* UNESCO.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4ED65A239DA31A009D2D07 /* UNESCO.png */; };
 		0A4ED65D239DA433009D2D07 /* objectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4ED65C239DA433009D2D07 /* objectVC.swift */; };
+		0A6A3EB823B6AEF600D17580 /* videoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A3EB723B6AEF600D17580 /* videoVC.swift */; };
 		0AB38A9D23A18A7D00D1A8B5 /* mapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB38A9C23A18A7D00D1A8B5 /* mapVC.swift */; };
 		0AC6C8F4239ECADB00980C92 /* detailObjVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC6C8F3239ECADB00980C92 /* detailObjVC.swift */; };
 		0AC6C8F823A01C2E00980C92 /* nophoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC6C8F723A01C2D00980C92 /* nophoto.png */; };
 		0AC6C8FA23A03B9400980C92 /* zingaro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AC6C8F923A03B9400980C92 /* zingaro.jpg */; };
 		0AC6C8FC23A03DE300980C92 /* etna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AC6C8FB23A03DE300980C92 /* etna.jpg */; };
 		0AC6C8FE23A04A2500980C92 /* valdinoto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AC6C8FD23A04A2500980C92 /* valdinoto.jpg */; };
+		0AE6E0DC23B55EB400F19FF6 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE6E0DB23B55EB400F19FF6 /* delete.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A2DB9F023B7CC0D0006D2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/sicily_guide_intro.mp4; sourceTree = "<group>"; };
+		0A2DB9F223B803550006D2F4 /* sound_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound_on.png; path = icon/sound_on.png; sourceTree = SOURCE_ROOT; };
+		0A2DB9F423B8035B0006D2F4 /* sound_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound_off.png; path = icon/sound_off.png; sourceTree = SOURCE_ROOT; };
+		0A2DB9F623B80DDC0006D2F4 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = icon/map.png; sourceTree = SOURCE_ROOT; };
+		0A2DB9F823BBB9B90006D2F4 /* nubia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nubia.jpg; path = pics/nubia.jpg; sourceTree = SOURCE_ROOT; };
+		0A2DB9FA23BBBCB80006D2F4 /* Pretoria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Pretoria.jpg; path = pics/Pretoria.jpg; sourceTree = SOURCE_ROOT; };
+		0A3CC2EB23B26167003724D6 /* dev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dev.png; path = sicily_offline_guide/dev.png; sourceTree = SOURCE_ROOT; };
 		0A44638D23ACA70100131CD8 /* settingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsVC.swift; sourceTree = "<group>"; };
 		0A44638F23AD6BD400131CD8 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		0A48275A23A61C1C0057F01F /* toDoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoVC.swift; sourceTree = "<group>"; };
@@ -70,12 +86,14 @@
 		0A4ED657239D85F5009D2D07 /* workCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workCoreData.swift; sourceTree = "<group>"; };
 		0A4ED65A239DA31A009D2D07 /* UNESCO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UNESCO.png; path = pics/UNESCO.png; sourceTree = SOURCE_ROOT; };
 		0A4ED65C239DA433009D2D07 /* objectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = objectVC.swift; sourceTree = "<group>"; };
+		0A6A3EB723B6AEF600D17580 /* videoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoVC.swift; sourceTree = "<group>"; };
 		0AB38A9C23A18A7D00D1A8B5 /* mapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapVC.swift; sourceTree = "<group>"; };
 		0AC6C8F3239ECADB00980C92 /* detailObjVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailObjVC.swift; sourceTree = "<group>"; };
 		0AC6C8F723A01C2D00980C92 /* nophoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nophoto.png; path = icon/nophoto.png; sourceTree = SOURCE_ROOT; };
 		0AC6C8F923A03B9400980C92 /* zingaro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = zingaro.jpg; path = pics/zingaro.jpg; sourceTree = SOURCE_ROOT; };
 		0AC6C8FB23A03DE300980C92 /* etna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = etna.jpg; path = pics/etna.jpg; sourceTree = SOURCE_ROOT; };
 		0AC6C8FD23A04A2500980C92 /* valdinoto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = valdinoto.jpg; path = pics/valdinoto.jpg; sourceTree = SOURCE_ROOT; };
+		0AE6E0DB23B55EB400F19FF6 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delete.png; path = icon/delete.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +126,7 @@
 		0A4ED629239D1D51009D2D07 /* sicily_offline_guide */ = {
 			isa = PBXGroup;
 			children = (
+				0A6A3EB923B6BBC500D17580 /* video */,
 				0A4ED659239DA30E009D2D07 /* pics */,
 				0A4ED64E239D3B03009D2D07 /* view controllers */,
 				0A4ED641239D2FE5009D2D07 /* icon */,
@@ -130,6 +149,11 @@
 			children = (
 				0A4ED646239D308D009D2D07 /* iconfinder_map_285662.png */,
 				0A4ED64C239D31A3009D2D07 /* Копия iconfinder_go-home_118770.png */,
+				0A2DB9F223B803550006D2F4 /* sound_on.png */,
+				0A2DB9F423B8035B0006D2F4 /* sound_off.png */,
+				0A2DB9F623B80DDC0006D2F4 /* map.png */,
+				0A3CC2EB23B26167003724D6 /* dev.png */,
+				0AE6E0DB23B55EB400F19FF6 /* delete.png */,
 				0A4ED653239D4D86009D2D07 /* iconfinder_Summer_512px-19_301715.png */,
 				0A48276223A62D050057F01F /* star_gray.png */,
 				0A48276423A62D0C0057F01F /* star_yellow.png */,
@@ -150,6 +174,7 @@
 				0A48275A23A61C1C0057F01F /* toDoVC.swift */,
 				0A4ED651239D3BAF009D2D07 /* tabbarVC.swift */,
 				0AC6C8F3239ECADB00980C92 /* detailObjVC.swift */,
+				0A6A3EB723B6AEF600D17580 /* videoVC.swift */,
 			);
 			path = "view controllers";
 			sourceTree = "<group>";
@@ -160,13 +185,23 @@
 				0A4ED65A239DA31A009D2D07 /* UNESCO.png */,
 				0AC6C8F923A03B9400980C92 /* zingaro.jpg */,
 				0A48276A23A6DD0D0057F01F /* scaladeiturchi.jpg */,
+				0A2DB9FA23BBBCB80006D2F4 /* Pretoria.jpg */,
 				0A48276823A6DC040057F01F /* greekTaormina.jpg */,
 				0A48276623A6D9220057F01F /* valledeitempli.jpg */,
 				0AC6C8FD23A04A2500980C92 /* valdinoto.jpg */,
+				0A2DB9F823BBB9B90006D2F4 /* nubia.jpg */,
 				0AC6C8FB23A03DE300980C92 /* etna.jpg */,
 				0AC6C8F723A01C2D00980C92 /* nophoto.png */,
 			);
 			path = pics;
+			sourceTree = "<group>";
+		};
+		0A6A3EB923B6BBC500D17580 /* video */ = {
+			isa = PBXGroup;
+			children = (
+				0A2DB9F123B7CC0D0006D2F4 /* sicily_guide_intro.mp4 */,
+			);
+			path = video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,15 +263,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A4ED63A239D1D56009D2D07 /* LaunchScreen.storyboard in Resources */,
+				0A3CC2EC23B26167003724D6 /* dev.png in Resources */,
 				0AC6C8F823A01C2E00980C92 /* nophoto.png in Resources */,
+				0A2DB9FB23BBBCB80006D2F4 /* Pretoria.jpg in Resources */,
 				0A48276B23A6DD0D0057F01F /* scaladeiturchi.jpg in Resources */,
+				0A2DB9F723B80DDC0006D2F4 /* map.png in Resources */,
 				0A4ED637239D1D56009D2D07 /* Assets.xcassets in Resources */,
 				0A48276723A6D9220057F01F /* valledeitempli.jpg in Resources */,
+				0A2DB9F323B803550006D2F4 /* sound_on.png in Resources */,
 				0A4ED65B239DA31A009D2D07 /* UNESCO.png in Resources */,
 				0AC6C8FA23A03B9400980C92 /* zingaro.jpg in Resources */,
 				0AC6C8FC23A03DE300980C92 /* etna.jpg in Resources */,
 				0A48276923A6DC040057F01F /* greekTaormina.jpg in Resources */,
 				0A4ED632239D1D51009D2D07 /* Main.storyboard in Resources */,
+				0A2DB9F923BBB9B90006D2F4 /* nubia.jpg in Resources */,
 				0A48276523A62D0C0057F01F /* star_yellow.png in Resources */,
 				0A4ED645239D3081009D2D07 /* iconfinder_document-03_1622833.png in Resources */,
 				0A4ED64B239D309A009D2D07 /* iconfinder_setting_icon_2541669.png in Resources */,
@@ -244,6 +284,9 @@
 				0A4ED654239D4D86009D2D07 /* iconfinder_Summer_512px-19_301715.png in Resources */,
 				0A48276323A62D050057F01F /* star_gray.png in Resources */,
 				0A4ED647239D308D009D2D07 /* iconfinder_map_285662.png in Resources */,
+				0A2DB9F523B8035B0006D2F4 /* sound_off.png in Resources */,
+				0A2DB9EF23B7CC0D0006D2F4 /* sicily_guide_intro.mp4 in Resources */,
+				0AE6E0DC23B55EB400F19FF6 /* delete.png in Resources */,
 				0AC6C8FE23A04A2500980C92 /* valdinoto.jpg in Resources */,
 				0A4ED64D239D31A3009D2D07 /* Копия iconfinder_go-home_118770.png in Resources */,
 			);
@@ -266,6 +309,7 @@
 				0A4ED62B239D1D51009D2D07 /* AppDelegate.swift in Sources */,
 				0A4ED62D239D1D51009D2D07 /* SceneDelegate.swift in Sources */,
 				0A4ED652239D3BAF009D2D07 /* tabbarVC.swift in Sources */,
+				0A6A3EB823B6AEF600D17580 /* videoVC.swift in Sources */,
 				0A44638E23ACA70100131CD8 /* settingsVC.swift in Sources */,
 				0A4ED635239D1D51009D2D07 /* sicily_offline_guide.xcdatamodeld in Sources */,
 				0A48275B23A61C1C0057F01F /* toDoVC.swift in Sources */,
@@ -275,6 +319,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0A2DB9F123B7CC0D0006D2F4 /* sicily_guide_intro.mp4 */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A2DB9F023B7CC0D0006D2F4 /* Base */,
+			);
+			name = sicily_guide_intro.mp4;
+			path = ../../../../../../../../../Users/dmitry/Documents;
+			sourceTree = SDKROOT;
+		};
 		0A4ED630239D1D51009D2D07 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
