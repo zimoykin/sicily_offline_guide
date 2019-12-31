@@ -12,7 +12,7 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+//    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         do {
             let dtbase = try context.fetch(Sight.fetchRequest()) as [Sight]
-            if dtbase.count < 6 {
+//            MARK: UPDATE Here
+            if dtbase.count < 8 {
                 print("dt base is empty")
                //we will make a new base from file
                 makeNewDT()
@@ -32,7 +33,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         catch let error as NSError {
             print("mistake! + \(error), \(error.userInfo)")
         }
-        
+
+//        let novideo: Bool = UserDefaults.standard.bool(forKey: "novideo")
+//        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+//        
+//        let vc: UIViewController = {
+//            if novideo {
+//                return storyboard.instantiateViewController(withIdentifier: "tabbarVC") as! tabbarVC
+//            } else {
+//                return storyboard.instantiateViewController(withIdentifier: "videoVC") as! videoVC
+//            }
+//        }()
+//        
+//        let navigationController = UINavigationController(rootViewController: vc)
+//        window?.rootViewController = navigationController
+//        window?.makeKeyAndVisible()
         
         return true
     }
@@ -77,14 +92,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                       imageName: "valdinoto.jpg",
                       context: context)
         
-        createNewItem(name: "Reserva Naturale Zingaro",
+        createNewItem(name: "Zingaro",
                       lati: 38.124765, long: 12.788857,
                       fulldescription: "Riserva naturale dello zingaro was the first natural reserve set up in Sicily in May 1981,[1] located almost completely in the municipal territory of San Vito Lo Capo. It stretches along some seven kilometers of unspoilt coastline of the Gulf of Castellammare and its mountain chain, the setting of steep cliffs and little bays. \n The Zingaro Reserve has a large variety and abundance of rare and endemic plants it also has a rich fauna. The highly varied ecological niches give a great diversity which is not easily found in others parts of the island. In the Zingaro Reserve at least 39 species of birds nest and mate, mainly birds of prey, including the peregrine falcon, the common kestrel and the common buzzard. The area has also a rich archaeological past; for example the spectacular Grotta dell'Uzzo [it] was one of the first prehistoric settlements in Sicily. The reserve has a complex network of paths, shelters, water taps, picnic areas, museums, carpark, and other amenities; there are no roads and it can only be visited on foot.[2]\nThe Zingaro Reserve does not only include the land, but also the sea and beaches, which stretch along the coast for almost 7 km. The beautiful beaches, pebbled and lapped by the clear blue sea, can be reached along various rather steep paths.",
                       unesco: false,
                       rang: 6,
                       imageName: "zingaro.jpg",
                       context: context)
-        createNewItem(name: "Valleys of the Temples",
+        createNewItem(name: "Valle dei Templi",
                       lati: 37.316666, long: 13.583333,
                       fulldescription: "Valley of the Temples is an archaeological site in Agrigento (ancient Greek Akragas), Sicily. It is one of the most outstanding examples of Greater Greece art and architecture, and is one of the main attractions of Sicily as]] list in 1997. Much of the excavation and restoration of the temples was due to the efforts of archaeologist Domenico Antonio Lo Faso Pietrasanta (1783–1863), who was the Duke of Serradifalco from 1809 through 1812.",
                       unesco: true,
@@ -99,7 +114,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                       rang: 3,
                       imageName: "scaladeiturchi.jpg",
                       context: context)
-        createNewItem(name: "Greek Theatre of Taormina",
+        createNewItem(name: "Taormina",
                       lati: 37.852293, long: 15.292208,
                       fulldescription: "The ancient theatre (the teatro greco, or 'Greek theatre') is built for the most part of brick, and is therefore probably of Roman date, though the plan and arrangement are in accordance with those of Greek, rather than Roman, theatres; whence it is supposed that the present structure was rebuilt upon the foundations of an older theatre of the Greek period. With a diameter of 120 metres (390 ft) (after an expansion in the 2nd century), this theatre is the second largest of its kind in Sicily (after that of Syracuse); it is frequently used for operatic and theatrical performances and for concerts. The greater part of the original seats have disappeared, but the wall which surrounded the whole cavea is preserved, and the proscenium with the back wall of the scena and its appendages, of which only traces remain in most ancient theatres, are here preserved in singular integrity, and contribute much to the picturesque effect, as well as to the interest, of the ruin. From the fragments of architectural decorations still extant we learn that it was of the Corinthian order, and richly ornamented. Some portions of a temple are also visible, converted into the church of San Pancrazio, but the edifice is of small size.",
                       unesco: true,
@@ -113,8 +128,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                       rang: 1,
                       imageName: "etna.jpg",
                       context: context)
+        
+        //37.982908, 12.497958
+        createNewItem(name: "Museo del sale (Nubia)",
+                      lati: 37.982908, long: 12.497958,
+                      fulldescription: "Il Museo del Sale è un museo tematico che si trova a Nubia, frazione del comune di Paceco, in provincia di Trapani. Si trova in un antico mulino a vento, all'interno della Riserva naturale integrale Saline di Trapani e Paceco. È una struttura privata. \nFa parte di un itinerario turistico-culturale regionale denominato la Via del sale[1]. Posto all'interno di un baglio chiamato 'casa salaria', tipica costruzione del Seicento a pianta rettangolare e tetto a due spioventi, adibito alla molitura dei cristalli di sale marino, con un grande mulino a vento annesso, circondato dalla salina denominata 'Chiusa', di proprietà dei Culcasi. Questa salina è inserita nel Registro Eredità Immateriali della Sicilia Il museo espone antichi strumenti di lavoro dei salinari, foto in bianco e nero, e reperti originali come ruzzoli, cattedri, le pale di legno dei mulini (ntinni), la spira (vite di Archimede per aspirare l'acqua della vasca) i listelli di legno (tagghia) per misurare il sale, e una pesante macina.",
+                      unesco: false,
+                      rang: 3,
+                      imageName: "nubia.jpg",
+                      context: context)
 
-        //enna 37.557023, 14.256488
+       // Piazza Pretoria - 38.115750, 13.361946
+        createNewItem(name: "Piazza Pretoria",
+                      lati: 38.115750, long: 13.361946,
+                      fulldescription: "In 1573 the Senate of Palermo bought a fountain initially intended for the Palace of San Clemente in Florence, with the intention of placing it in the square.\nTo make way for the monumental achievement, designed for an open place, several homes were demolished and the fountain was re-adapted to the site with the addition of new parts. In 1581 the works of accommodation of the fountain on the square.\nThe large central fountain is the focal point for sixteen nude statues of nymphs, humans, mermaids and satyrs. Since eighteenth century in 1860, the fountain was considered the representation of corrupt municipalities, and Palermo nicknamed the square with the nudity of the statues, the Square of Shame (Piazza della vergogna.) This may have also been reflecting the prevailing influence of the Spanish Inquisition during that time.",
+                      unesco: false,
+                      rang: 3,
+                      imageName: "Pretoria.jpg",
+                      context: context)
+
+        
         
         do {
            try context.save()
