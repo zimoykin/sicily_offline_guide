@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vof-pm-4xk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-674" y="1641"/>
+            <point key="canvasLocation" x="-141" y="1731"/>
         </scene>
         <!--VideoVC-->
         <scene sceneID="vNW-0V-ucf">
@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIR-uo-2UT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1110" y="50"/>
+            <point key="canvasLocation" x="-1688" y="64"/>
         </scene>
         <!--TabbarVC-->
         <scene sceneID="Xdy-Eo-Z05">
@@ -144,6 +144,6 @@
         <image name="Копия iconfinder_go-home_118770.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bP5-Hc-vq7"/>
+        <segue reference="D83-BK-3To"/>
     </inferredMetricsTieBreakers>
 </document>
